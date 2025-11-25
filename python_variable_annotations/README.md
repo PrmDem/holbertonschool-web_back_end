@@ -11,7 +11,7 @@
 ### General information
 __Number of tasks:__ 10<br/>
 __Completed:__ 10<br/>
-__Passed:__ TBA<br/>
+__Passed:__ 10<br/>
 
 #### 0. Basic annotations - add
 Takes floats `a` and `b` as arguments and returns their sum as a float.<br/>
