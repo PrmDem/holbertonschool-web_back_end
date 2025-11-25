@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-from typing import List, Iterable, Sequence, Tuple
-
 """Annotation of parameters according to expected return:
 
     {'lst': typing.Iterable[typing.Sequence],
       'return': typing.List[typing.Tuple[typing.Sequence, int]]}
 """
+from typing import List, Iterable, Sequence, Tuple
 
 
 def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:

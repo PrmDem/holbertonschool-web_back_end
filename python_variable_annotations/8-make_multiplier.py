@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-from typing import Callable
-
 """Creates a Callable object that multiplies a number
     by the float 'multiplier' passed as argument to this module
 
     Variables and expected return
     are validated via type annotation.
 """
+from typing import Callable
 
 
 def make_multiplier(multiplier: float) -> Callable[[float], float]:
@@ -15,17 +14,17 @@ def make_multiplier(multiplier: float) -> Callable[[float], float]:
                 arguments used in the Callable function
 
         Returns:
-            (Callable) A function that multiplies a number argument
-                    by multiplier
+            Callable[[float], float] A function that multiplies
+                a number argument by multiplier
     """
-    def multi(multiplier: float) -> float:
+    def multi(val: float) -> float:
         """Multiplies the float argument by itself
 
         Args:
-            arg (float): number to multiply
+            val (float): number to multiply
 
         Returns:
-            The result of the multiplication
+            The result of the multiplication (float)
         """
-        return (multiplier * multiplier)
+        return (val * multiplier)
     return multi

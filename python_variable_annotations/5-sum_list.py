@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
-from typing import List
-
 """Calculates the sum of floats
     present in a list passed as argument
 
     Variables and expected return
     are validated via type annotation.
 """
+from typing import List
 
 
 def sum_list(input_list: List[float]) -> float:
     """Args:
-            input_list (list of floats): contains only floats to
+            input_list (List[float]): contains only floats to
                     calculate the sum of
 
         Returns:
