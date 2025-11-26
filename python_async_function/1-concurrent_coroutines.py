@@ -1,4 +1,4 @@
-#!/user/bin/env python3
+#!/usr/bin/env python3
 """This module uses the 'wait_random' module to create
 an async routine that spawns 'wait_random' a certain
 amount of time within a specified 'max_delay'.
@@ -24,10 +24,6 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
         List[float]: delays in ascending order
     """
     coro = [asyncio.create_task(wait_random(max_delay)) for idx in range(n)]
-    listDelays = []
-
-    for coro in asyncio.as_completed(coro):
-        delay = await coro
-        listDelays.append(delay)
+    listDelays = [await coro for coro in asyncio.as_completed(coro)]
 
     return listDelays
