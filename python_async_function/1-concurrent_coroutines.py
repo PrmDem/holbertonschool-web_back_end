@@ -1,15 +1,15 @@
 #!/user/bin/env python3
-"""This module use the 'wait_random' module to create
+"""This module uses the 'wait_random' module to create
 an async routine that spawns 'wait_random' a certain
-given of time within a specified 'max_delay'.
+amount of time within a specified 'max_delay'.
 
 The module returns the list of delays as floats,
 in ascending order.
 """
-
-
 import asyncio
 from typing import List
+
+
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
