@@ -6,6 +6,8 @@ given of time within a specified 'max_delay'.
 The module returns the list of delays as floats,
 in ascending order.
 """
+
+
 import asyncio
 from typing import List
 wait_random = __import__('0-basic_async_syntax').wait_random
@@ -21,7 +23,6 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     Return:
         List[float]: delays in ascending order
     """
-    idx: int = 0
     coro = [asyncio.create_task(wait_random(max_delay)) for idx in range(n)]
     listDelays: List[float] = [
         await coro for coro in asyncio.as_completed(coro)
