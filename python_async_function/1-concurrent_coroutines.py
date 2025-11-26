@@ -22,11 +22,9 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
         List[float]: delays in ascending order
     """
     idx: int = 0
-    coro = [wait_random(max_delay) for idx in range(n)]
-    listDelays: List[float] = []
-
-    for coro in asyncio.as_completed(coro):
-        wait = await coro
-        listDelays.append(wait)
+    coro = [asyncio.create_task(wait_random(max_delay)) for idx in range(n)]
+    listDelays: List[float] = [
+        await coro for coro in asyncio.as_completed(coro)
+        ]
 
     return listDelays
