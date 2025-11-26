@@ -11,8 +11,8 @@
 
 ### General information
 __Number of tasks:__ 3<br/>
-__Completed:__ TBA<br/>
-__Passed:__ TBA<br/>
+__Completed:__ 3<br/>
+__Passed:__ 3<br/>
 
 #### 0. Async Generator
 The coroutine `async_generator` will loop 10 times, waiting a second each time, then yield a random number between 0 and 10.<br/>
