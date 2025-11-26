@@ -14,7 +14,7 @@ async def measure_time(n: int, max_delay: int) -> float:
 
     Args:
         n (int): # of times to run the function
-        max_delay (int): maximum delay before returning value
+        max_delay (int): passed to wait_random, delay duration
 
     Return:
         (float) time elapsed while wait_n was running
