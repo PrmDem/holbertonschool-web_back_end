@@ -10,7 +10,6 @@ Example:
 >>> print(res)
 (15, 30)
 """
-import typing
 
 
 def index_range(page: int, page_size: int) -> tuple:
@@ -24,7 +23,7 @@ def index_range(page: int, page_size: int) -> tuple:
         res (tuple): start and end indexes of elements
                 in a list, to display those within range
     """
-    start: int = page_size * (page - 1)     # due to page 1 starting with idx 0, p2 with idx 15 etc
+    start: int = page_size * (page - 1)  # as p1 starts at idx 0, p2 at 15...
     end: int = page * page_size   # number of times we saw that amount of items
     res: tuple = (start, end)
     return res
