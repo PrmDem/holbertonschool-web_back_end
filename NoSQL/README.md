@@ -19,8 +19,8 @@ Through this project we'll learn how to use MongoDB, which stores data in JSON-l
 ## Tasks overview
 ### General information
 __Number of tasks:__ 13<br/>
-__Completed:__ 6<br/>
-__Passed:__ 5<br/>
+__Completed:__ 7<br/>
+__Passed:__ 6<br/>
 
 ### Details
 #### 0. List all databases
@@ -43,11 +43,11 @@ See file [`4-match`](./4-match)
 Displays the number of documents in the collection `school`.<br/>
 See file [`5-count`](./5-count)
 #### 6. Update
-<br/>
-See file [``](./)
+Adds attribute `address: "972 Mission street"` to all documents in the collection `school` where `name: "Holberton school"`.<br/>
+See file [`6-update`](./6-update)
 #### 7. Delete by match
-<br/>
-See file [``](./)
+Deletes all documents with `name="Holberton school"` in the collection `school`.<br/>
+See file [`7-delete`](./7-delete)
 #### 8. List all documents in Python
 <br/>
 See file [``](./)
