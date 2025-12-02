@@ -19,10 +19,47 @@ Through this project we'll learn how to use MongoDB, which stores data in JSON-l
 ## Tasks overview
 ### General information
 __Number of tasks:__ 13<br/>
-__Completed:__ 1<br/>
-__Passed:__ TBA<br/>
+__Completed:__ 3<br/>
+__Passed:__ 2<br/>
 
 ### Details
 #### 0. List all databases
 Lists all databases in MongoDB.<br/>
 See file [`0-list_databases`](./0-list_databases)
+#### 1. Create a database
+Creates or uses the database `my_db`.<br/>
+See file [`1-use_or_create_database`](./1-use_or_create_database)
+#### 2. Insert document
+Inserts a document in the collection `school`. The document's sole attribute is `name`, with the value `Holberton school`.<br/>
+The database name will be passed as an option in the mongo command.<br/>
+See file [`2-insert`](./2-insert)
+#### 3. All documents
+<br/>
+See file [``](./)
+#### 4. All matches
+<br/>
+See file [``](./)
+#### 5. Count
+<br/>
+See file [``](./)
+#### 6. Update
+<br/>
+See file [``](./)
+#### 7. Delete by match
+<br/>
+See file [``](./)
+#### 8. List all documents in Python
+<br/>
+See file [``](./)
+#### 9. Insert a document in Python
+<br/>
+See file [``](./)
+#### 10. Change school topics
+<br/>
+See file [``](./)
+#### 11. Where can I learn Python?
+<br/>
+See file [``](./)
+#### 12. Log stats
+<br/>
+See file [``](./)
