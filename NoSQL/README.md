@@ -19,8 +19,8 @@ Through this project we'll learn how to use MongoDB, which stores data in JSON-l
 ## Tasks overview
 ### General information
 __Number of tasks:__ 13<br/>
-__Completed:__ 3<br/>
-__Passed:__ 2<br/>
+__Completed:__ 6<br/>
+__Passed:__ 5<br/>
 
 ### Details
 #### 0. List all databases
@@ -34,14 +34,14 @@ Inserts a document in the collection `school`. The document's sole attribute is 
 The database name will be passed as an option in the mongo command.<br/>
 See file [`2-insert`](./2-insert)
 #### 3. All documents
-<br/>
-See file [``](./)
+Lists all the documents in the `school` collection.<br/>
+See file [`3-all`](./3-all)
 #### 4. All matches
-<br/>
-See file [``](./)
+Lists all documents with `name="Holberton school"` in the collection `school`.<br/>
+See file [`4-match`](./4-match)
 #### 5. Count
-<br/>
-See file [``](./)
+Displays the number of documents in the collection `school`.<br/>
+See file [`5-count`](./5-count)
 #### 6. Update
 <br/>
 See file [``](./)
