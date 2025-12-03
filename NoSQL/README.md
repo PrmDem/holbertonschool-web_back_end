@@ -10,7 +10,6 @@ Through this project we'll learn how to use MongoDB, which stores data in JSON-l
 * Code should use the pycodestyle style (version 2.5.)
 * File length will be tested using wc
 * All functions, modules, and classes should have a documentation
-* Code should not be executed when imported (by using `if __name__ == "__main__":`)
 ### For MongoDB command files:
 * All files will be interpreted/compiled on Ubuntu 20.04 LTS using MongoDB (version 4.4)
 * All files should start with a comment and end with a new line
@@ -19,8 +18,8 @@ Through this project we'll learn how to use MongoDB, which stores data in JSON-l
 ## Tasks overview
 ### General information
 __Number of tasks:__ 13<br/>
-__Completed:__ 11<br/>
-__Passed:__ 10<br/>
+__Completed:__ 13<br/>
+__Passed:__ 13<br/>
 
 ### Details
 #### 0. List all databases
@@ -58,8 +57,18 @@ See file [`9-insert_school.py`](./9-insert_school.py)
 Changes all topics of a school collection document according to its name.<br/>
 See file [`10-update_topics.py`](./10-update_topics.py)
 #### 11. Where can I learn Python?
-<br/>
-See file [``](./)
+Returns the list of schools having a specific topic.<br/>
+See file [`11-schools_by_topic.py`](./11-schools_by_topic.py)
 #### 12. Log stats
-<br/>
-See file [``](./)
+Provides stats about Nginx logs from dump file. Output format is as follows:
+```
+94778 logs
+Methods:
+    method GET: 93842
+    method POST: 229
+    method PUT: 0
+    method PATCH: 0
+    method DELETE: 0
+47415 status check
+```
+See file [`12-log_stats.py`](./12-log_stats.py)
