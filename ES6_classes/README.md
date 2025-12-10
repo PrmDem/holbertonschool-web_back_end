@@ -11,8 +11,8 @@
 ## Tasks
 ### General information
 __Number of tasks:__ 11<br/>
-__Completed:__ 7<br/>
-__Passed:__ TBA<br/>
+__Completed:__ 11<br/>
+__Passed:__ 10<br/>
 
 ### Overview
 #### 0. You used to attend a place like this at some point
@@ -42,11 +42,11 @@ See file [`6-sky_high.js`](./6-sky_high.js)
 Implements class `Airport` with string constructor attributes `code` and `name`. The default string description of the class should be the airport's `code`.<br/>
 See file [`7-airport.js`](./7-airport.js)
 #### 8. Primitive - Holberton Class
-<br/>
-See file [``](./)
+Implement class `HolbertonClass` with constructor attributes `size` (number) and `location` (string). When the class is cast into a number it returns `size`, and when cast into a string it returns `location`.<br/>
+See file [`8-hbtn_class.js`](./8-hbtn_class.js)
 #### 9. Hoisting
-<br/>
-See file [``](./)
+Fix the provided code so that it properly displays a list of students.<br/>
+See file [`9-hoisting.js`](./9-hoisting.js)
 #### 10. Vroom
-<br/>
-See file [``](./)
+Implement a class `Car` with string constructor attributes `brand`, `motor`, and `color`. Add method `cloneCar` that returns a new object of the class.<br/>
+See file [`10-car.js`](./10-car.js)
