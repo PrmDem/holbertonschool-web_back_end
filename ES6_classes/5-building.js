@@ -7,7 +7,7 @@ export default class Building {
     this._sqft = sqft;
 
     if (new.target === Building && !new.target.evacuationWarningMessage) {
-      throw new Error('Class extending Building must override evacuationWarningMessage()');
+      throw new Error('Class extending Building must override evacuationWarningMessage');
     }
   }
 
