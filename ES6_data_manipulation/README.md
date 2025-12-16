@@ -13,8 +13,8 @@
 ## Tasks
 ### General information
 __Number of tasks:__ 11<br/>
-__Completed:__ 6<br/>
-__Passed:__ TBA<br/>
+__Completed:__ 11<br/>
+__Passed:__ 6<br/>
 
 ### Overview
 #### 0. Basic list of objects
@@ -50,7 +50,7 @@ Create a function named `hasValuesFromArray` that accepts two arguments, a `Set`
 See file [`7-has_array_values.js`](./7-has_array_values.js)
 
 #### 8. Clean set
-<br/>
+Creates function `cleanSet` that accepts two arguments, `set` (Set) and `startString` (String). The function returns a string of all the set values that start with `startString`. Only the non-startString part of a string is appended to the return value.<br/>
 See file [`8-clean_set.js`](./8-clean_set.js)
 
 #### 9. Map data structure
