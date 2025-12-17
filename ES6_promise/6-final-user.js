@@ -15,7 +15,7 @@ export default async function handleProfileSignup(firstName, lastName, fileName)
     } else {
       return {
         status: res.status,
-        value: res.reason
+        value: String(res.reason)
       };
     }
   });
