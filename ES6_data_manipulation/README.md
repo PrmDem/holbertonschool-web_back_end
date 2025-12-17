@@ -14,7 +14,7 @@
 ### General information
 __Number of tasks:__ 11<br/>
 __Completed:__ 11<br/>
-__Passed:__ 6<br/>
+__Passed:__ 11<br/>
 
 ### Overview
 #### 0. Basic list of objects
