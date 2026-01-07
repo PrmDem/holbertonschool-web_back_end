@@ -20,13 +20,13 @@ function countStudents(pathToFile) {
     });
 
     for (const spec in lists) {
-      if (Object.hasOwn(lists, spec)) {
+      if (Object.hasOwn(lists, spec)) { // for eslint 'guard for in'
         const specList = lists[spec]; // Getting field property's value for manipulation
         console.log(`Number of students in ${spec}: ${specList.length}. List: ${specList.join(', ')}`);
       }
     }
   } catch (err) {
-    console.error('Cannot load the database');
+    throw new Error('Cannot load the database');
   }
 }
 
