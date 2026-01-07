@@ -6,7 +6,7 @@ async function countStudents(pathToFile) { // declare async
     const lines = data.trim().split('\n'); // Turn csv into Array obj, removing blank spaces
     const students = lines.slice(1); // students are now separate from fields
 
-    console.log(`Number of students: ${students.length}\n`);
+    console.log(`Number of students: ${students.length}`);
 
     const lists = {};
 
