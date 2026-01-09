@@ -1,20 +1,46 @@
-const http = require('http');
-const countStudents = require('./3-read_file_async'); // Using past file as a module
+const http = require('node:http');
+const fs = require('node:fs');
 
-const app = http.createServer(async (req, res) => {
-  if (req.url === '/students') {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
+const app = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+
+  if (req.url === '/') {
+    res.end('Hello Holberton School!');
+  } else if (req.url === '/students') {
     res.write('This is the list of our students\n'); // Need to add \n manually with res.write
 
-    try {
-      const data = await countStudents(process.argv[2]); // path to file given in command line
-      res.end(data);
-    } catch (err) {
-      res.end(err.message);
-    }
-  } else { // So all other routes display message, not just '/'
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello Holberton School!');
+    fs.readFile(process.argv[2], 'utf8', (err, data) => {
+      if (err) {
+        res.statusCode(500);
+        res.end('Cannot load the database');
+        return;
+      }
+
+      const lines = data.trim().split('\n');
+      const students = lines.slice(1);
+
+      res.write(`Number of students: ${students.length}\n`);
+
+      const lists = {};
+
+      students.forEach((stdn) => {
+        // eslint-disable-next-line no-unused-vars
+        const [first, _last, _age, field] = stdn.split(',');
+        if (!lists[field]) {
+          lists[field] = []; // add as 'lists' object properties, value is a list
+        }
+        lists[field].push(first); // adds first name to the corresponding list
+      });
+
+      for (const spec in lists) {
+        if (Object.hasOwn(lists, spec)) { // for eslint 'guard for in'
+          const specList = lists[spec];
+          res.write(`Number of students in ${spec}: ${specList.length}. List: ${specList.join(', ')}\n`);
+        }
+      }
+
+      res.end();
+    });
   }
 });
 
