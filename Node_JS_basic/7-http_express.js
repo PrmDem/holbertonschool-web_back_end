@@ -1,0 +1,46 @@
+const express = require('express');
+const fs = require('node:fs');
+
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello Holberton School!');
+});
+
+app.get('/students', (req, res) => {
+  fs.readFile(process.argv[2], 'utf8', (err, data) => {
+    if (err) {
+      res.status(500).send('Cannot load the database');
+      return; // stops & exits function if no database is found or data cannot be read
+    }
+
+    const lines = data.trim().split('\n');
+    const students = lines.slice(1);
+
+    res.write(`Number of students: ${students.length}\n`);
+
+    const lists = {};
+
+    students.forEach((stdn) => {
+      // eslint-disable-next-line no-unused-vars
+      const [first, _last, _age, field] = stdn.split(',');
+      if (!lists[field]) {
+        lists[field] = []; // add as 'lists' object properties, value is a list
+      }
+      lists[field].push(first); // adds first name to the corresponding list
+    });
+
+    for (const spec in lists) {
+      if (Object.hasOwn(lists, spec)) { // for eslint 'guard for in'
+        const specList = lists[spec];
+        res.write(`Number of students in ${spec}: ${specList.length}. List: ${specList.join(', ')}\n`);
+      }
+    }
+
+    res.end();
+  });
+});
+
+app.listen(1245);
+
+module.exports = app;
