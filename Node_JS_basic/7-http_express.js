@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const app = express();
 
 app.get('/', (req, res) => {
+  res.set('Content-Type', 'text/plain');
   res.send('Hello Holberton School!');
 });
 
@@ -13,7 +14,7 @@ app.get('/students', (req, res) => {
 
   fs.readFile(process.argv[2], 'utf8', (err, data) => {
     if (err) {
-      res.status(500).send('Cannot load the database');
+      res.status(500).end('Cannot load the database');
       return; // stops & exits function if no database is found or data cannot be read
     }
 
