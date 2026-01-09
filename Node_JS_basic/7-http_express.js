@@ -8,6 +8,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/students', (req, res) => {
+  res.set('Content-Type', 'text/plain');
+  res.write('This is the list of our students\n');
+
   fs.readFile(process.argv[2], 'utf8', (err, data) => {
     if (err) {
       res.status(500).send('Cannot load the database');
