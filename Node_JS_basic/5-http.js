@@ -2,7 +2,8 @@ const http = require('node:http');
 const fs = require('node:fs');
 
 const app = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
 
   if (req.url === '/') {
     res.end('Hello Holberton School!');
@@ -11,9 +12,9 @@ const app = http.createServer((req, res) => {
 
     fs.readFile(process.argv[2], 'utf8', (err, data) => {
       if (err) {
-        res.statusCode(500);
+        res.statusCode = 500;
         res.end('Cannot load the database');
-        return;
+        return; // stops & exits function if no database is found or data cannot be read
       }
 
       const lines = data.trim().split('\n');
@@ -41,8 +42,6 @@ const app = http.createServer((req, res) => {
 
       res.end();
     });
-  } else {
-    res.end('Hello Holberton School!'); // Displaying a message for any other path like in previous task
   }
 });
 
