@@ -41,6 +41,8 @@ const app = http.createServer((req, res) => {
 
       res.end();
     });
+  } else {
+    res.end('Hello Holberton School!'); // Displaying a message for any other path like in previous task
   }
 });
 
